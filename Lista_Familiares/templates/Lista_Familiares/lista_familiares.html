@@ -1,0 +1,19 @@
+{% extends 'Lista_Familiares/base.html' %}
+
+{% block content %}
+
+    <h1>Familiares</h1>
+
+{% for familiar in familiar %}
+
+    <ul>
+        
+        <li><strong>Nombre: {{ familiar }}</strong></li>
+        <li>Ocupacion: {{ familiar.ocupacion }}</li>
+        <li>Fecha de nacimiento: {{ familiar.nacimiento }}</li>
+        <li>Numero de documento: {{ familiar.dni }}</li>
+    </ul>
+    <br/>
+{% endfor %}
+
+{% endblock %}
